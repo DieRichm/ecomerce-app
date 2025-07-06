@@ -1,0 +1,46 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px;
+}
+.child{
+    display: none;
+    
+}
+.parent:hover .child{
+    display: flex;
+}
+
+.list {
+    display: none;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    background-color: black;
+    color:whitesmoke;
+
+}
+    
+
+.menu li{
+        border-top: 1px solid rgba(0,255,38);
+        &:hover{
+            border-top: 1px solid red;
+        }
+
+    }
+
+
+.menu li:hover .list {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    row-gap: 15px;
+    background-color: brown;
+    padding-left: 0px;
+    padding: 50px;
+
+}
