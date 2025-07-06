@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid whitesmoke;
+            row-gap: 10px;
+            box-shadow: inset 0 0 200px 10px rgba(0,0,0,1) ;
+            color:black;
+
+
+        }
+        .form input,select{
+            padding: 10px;
+            border: 1px solid;
+            box-shadow: inset 0 0 rgba(0,0,0,0,1);
+
+        }
+        .form input[type="submit"]{
+            background-color: rgb(147, 232, 130);
+            color: aliceblue;
+            cursor: pointer;
+        }
+        .form input[type="submit"]:hover{
+            background-color: green;
+            
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+           background-image: url("images/IMG-20250621-WA0124.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-color: black;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    
+<div class="main">
+    <fieldset>
+        <legend>Ecommerce</legend>
+    <form action="post" method="post "id="form" class="form">
+
+<input type="text" name="firstname" id="firstname" placeholder="First Nane">
+<input type="password" name="password" id="password" placeholder="Password">
+<input type="email" name="email" id="email" placeholder="Email">
+<input type="time" name="time" id="time">
+<input type="datetime-local" name="date" id="date">
+<label for="">Gender</label>
+<div class="gender">
+    male: <input type="radio" name="gender" id="male" value="male">
+    female:<input type="radio" name="gender" id="female" value="female">
+
+
+</div>
+<label for="Gender">Favarite colors </label>
+<div class="fav">
+    Red: <input type="checkbox" name="red" id="red" value="red">
+    Green:<input type="checkbox" name="green" id="green" value="green">
+    Blue:<input type="checkbox" name="blue" id="blue" value="blue">
+    Yellow:<input type="checkbox" name="yellow" id="yellow" value="yellow">
+    Whit:<input type="checkbox" name="white" id="blue" value="white">
+
+
+
+
+</div>
+<select name="country" id="country">
+     <option value="Country" selected disabled>Country</option>
+   
+    <option value="Togo">Togo</option>
+    <option value="Nigerial"> Nigerial</option>
+    <option value="Benni"> Benni</option>
+     <option value="Ghana">Ghana</option>
+</select>
+<label for="self"> Tell Me About You</label>
+<Textarea rows="3" cols="3" ></Textarea>
+
+<input type="submit" value="send" id="send">
+
+
+</div>
+
+
+
+
+ 
+
+</form>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/form.js"></script> 
+</body>
+</html>
