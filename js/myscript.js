@@ -59,20 +59,20 @@
  
 
 
-// let dispaly = document.getElementById("textdisplay");
-// let Mubarack = 100;
-// let Boadi = 200;
-// let Asanti = 300;
+let dispaly = document.getElementById("textdisplay");
+let Mubarack = 100;
+let Boadi = 200;
+let Asanti = 300;
 
-// let fist = Mubarack > Boadi && Mubarack > Asanti;
+let fist = Mubarack > Boadi && Mubarack > Asanti;
 
-// let second = Boadi > Mubarack && Boadi > Asanti;
+let second = Boadi > Mubarack && Boadi > Asanti;
 
-// let third = Asanti > Mubarack && Asanti > Boadi;
+let third = Asanti > Mubarack && Asanti > Boadi;
  
-// fist ? dispaly.innerHTML = " Mubarack Has The Biggest Number" : console. log("")
-// second ? dispaly.innerHTML = "Boadi Has The Biggest Number" : console. log("")
-// third ? dispaly.innerHTML = " Asant Has The Biggest Number"  : console. log("")
+fist ? dispaly.innerHTML = " Mubarack Has The Biggest Number" : console. log("")
+second ? dispaly.innerHTML = "Boadi Has The Biggest Number" : console. log("")
+third ? dispaly.innerHTML = " Asant Has The Biggest Number"  : console. log("")
 
 
 
