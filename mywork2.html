@@ -8,6 +8,185 @@
     <link rel="stylesheet" href="css/dropdown.css">
 
     <style>
+     * {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+ 
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: rgb(255, 0, 115);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+ 
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: rgb(255, 0, 115);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
 
   *{
     list-style: none;
@@ -35,17 +214,13 @@
   
   }
 
-   .row{
+     .row{
   
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap:10px;
-  
-  
-  
-  }
+}
   
   .rowFooter{
   
@@ -149,29 +324,67 @@
   
 
 
-    <nav class="nav rowFooter">
+    <nav class="nav row">
         <div>jiji</div>
-        <div><a href="dropdown.html">Contact Us</a></div>
         
-         </div>
-         <div><a href="form.html">Sign in| Registration</a></div>
-          SELL
+        <div>Contact Us</div>
+        
+         
+         <a href="form.html"><div>Sign in| Registration</div></a>
+         <a href="slides2.htm"><div> SELL </div></a>
           
            
     </nav>
-    <div class="maincover">
-      <img src="images/logo.jpg"height="100%"  width="100%" alt="" id="cover">
+    
+    
+    
+    <div class="slideshow-container">
+    <div class="mySlides fade">
+    <!-- <div class="numbertext">1 / 3</div> -->
+    <img src="images/logo.jpg" style="width:100%">
+    <!-- <div class="text">Next </div> -->
+  </div>
 
+  <div class="mySlides fade">
+    <!-- <div class="numbertext">2 / 3</div> -->
+    <img src="images/logo1.jpg" style="width:100%">
+    <!-- <div class="text">Next </div> -->
+  </div>
+
+  <div class="mySlides fade">
+    <!-- <div class="numbertext">3 / 3</div> -->
+    <img src="images/pexels-albinberlin-919073.jpg" style="width:100%">
+    <!-- <div class="text">End</div> -->
+  </div>
+
+ 
+  <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+</div>
+<br>
+
+
+<!-- <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> -->
+
+
+
+
+
+  
+          
+           
+    
+    
       <div class="cap">
        <a href="rt.html"> shop now</a>
        
 
       </div>
-      </div>
-
-    
-          
-
+      </div> 
     <div class="cover column">
       <div class="seth">
          FASHION
@@ -184,10 +397,17 @@
             <P>$19</P>
             <button>Add to Cart</button>
         </div>
+        <div class="box">
+          <div class="img"><img src="images/dress.jpg" alt="" height="100%" width="100%" ></div>
+          <h17>Backcase</h17>
+            <P>$300</P>
+            <button>Add to Cart</button>
+          
+            </div>
 
         <div class="box">
           
-          <div class="img"><img src="images/IMG-20250621-WA0127.jpg" alt="" height="100%" width="100%" ></div>
+          <div class="img"><img src="images/cloth.avif" alt="" height="100%" width="100%" ></div>
           <h2>Gucci</h2>
             <P>$19</P>
             <button>Add to Cart</button>
@@ -195,7 +415,7 @@
 
         <div class="box">
           
-          <div class="img"><img src="images/IMG-20250621-WA0127.jpg" alt="" height="100%" width="100%" ></div>
+          <div class="img"><img src="images/cloth1.avif" alt="" height="100%" width="100%" ></div>
           <h2>Gucci</h2>
             <P>$19</P>
             <button>Add to Cart</button>
@@ -207,12 +427,46 @@
             <P>$19</P>
             <button>Add to Cart</button>
         </div>
+        <div class="box">
+          <div class="img"><img src="images/cloth2.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Top and Down</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+         <div class="box">
+          <div class="img"><img src="images/cloth3.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Top and Down</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+         <div class="box">
+          <div class="img"><img src="images/dress.webp" alt="" height="100%" width="100%" ></div>
+          <h18>Quality Dress</h18>
+            <P>$200</P>
+            <button>Add to Cart</button>
+          
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/cloth4.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Top and Down</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        
 
          <div class="box">
           <div class="img"><img src="images/IMG-20250621-WA0124.jpg" alt="" height="100%" width="100%" ></div>
            <h5>Best Wear</h5>
             <P>$19</P>
             <button>Add to Cart</button>
+        </div>
+          <div class="box">
+          <div class="img"><img src="images/sett.jpg" alt="" height="100%" width="100%" ></div>
+          <h15>Street Dress</h15>
+            <P>$100</P>
+            <button>Add to Cart</button>
+          
+          
         </div>
 
          <div class="box">
@@ -245,6 +499,39 @@
             <P>$70,0000</P>
             <button>Add to Cart</button>
         </div>
+        <div class="box">
+          <div class="img"><img src="images/lambo.avif" alt="" height="100%" width="100%" ></div>
+          <h8>Lambo</h8>
+            <P>$80,0000</P>
+            <button>Add to Cart</button>
+        </div>
+         <div class="box">
+          <div class="img"><img src="images/lambo1.avif" alt="" height="100%" width="100%" ></div>
+          <h8>Lambo</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/bmw.avif" alt="" height="100%" width="100%" ></div>
+          <h8>BMW</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/bmw1.avif" alt="" height="100%" width="100%" ></div>
+          <h8>BMW</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+            
+
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/bmw2.avif" alt="" height="100%" width="100%" ></div>
+          <h8>BMW</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+        </div>
+
 
          <div class="box">
           <div class="img"><img src="images/pexels-pixabay-210019.jpg" alt="" height="100%" width="100%" ></div>
@@ -339,39 +626,7 @@
          
            
     </div>
-    <div class="cover column">
-      <div class="seth">
-         Unisex WEAR
-         </div>
-       <div class="row">
-         <div class="box">
-          <div class="img"><img src="images/sett.jpg" alt="" height="100%" width="100%" ></div>
-          <h15>Street Dress</h15>
-            <P>$100</P>
-            <button>Add to Cart</button>
-          
-          
-        </div>
-        
-         <div class="box">
-          <div class="img"><img src="images/dress.webp" alt="" height="100%" width="100%" ></div>
-          <h18>Quality Dress</h18>
-            <P>$200</P>
-            <button>Add to Cart</button>
-          
-        </div>
-
-         
-
-         <div class="box">
-          <div class="img"><img src="images/dress.jpg" alt="" height="100%" width="100%" ></div>
-          <h17>Backcase</h17>
-            <P>$300</P>
-            <button>Add to Cart</button>
-          
-            </div>
-        </div>
-    </div>
+   
 
 
     <div class="cover column">
@@ -389,6 +644,37 @@
         
          <div class="box">
           <div class="img"><img src="images/lap2.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap8.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap7.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap6.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap5.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+       
+                <div class="box">
+          <div class="img"><img src="images/lap3.avif" alt="" height="100%" width="100%" ></div>
           <h4>Laptop</h4>
             <P>$19</P>
             <button>Add to Cart</button>
@@ -601,7 +887,8 @@
 
 
 
-  <script src="js/form.js"></script>  
+  <script src="js/form.js"></script> 
+<script src="js/slidesauto.js"></script>
   
 </body>
 
