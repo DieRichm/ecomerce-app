@@ -54,20 +54,7 @@ function updateNavbarUser() {
     const username = localStorage.getItem("loggedInUser");
     const nav = document.querySelector(".nav-items");
     if (username) {
-        nav.innerHTML = `
-            <div class="dropdown">
-                <button class="dropbtn">Categories ▾</button>
-                <div class="dropdown-content">
-                    <a href="#">Phones & Tablets</a>
-                    <a href="#">Electronics</a>
-                    <a href="#">Fashion</a>
-                    <a href="#">Home Appliances</a>
-                </div>
-            </div>
-            <span style="color:white;">👤 ${username}</span>
-            <a href="#" onclick="logout()">Logout</a>
-            <a href="#">🛒 Cart (0)</a>
-        `;
+       
     }
 }
 
@@ -119,6 +106,7 @@ products.forEach(product => {
     <img src="${product.image}" alt="${product.name}">
     <h3>${product.name}</h3>
     <p>${product.price}</p>
+    <p class='cart'>Add cart</p>
   `;
   grid.appendChild(card);
 });

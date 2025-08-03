@@ -48,6 +48,7 @@ function displayProducts(filteredProducts) {
       <img src="${product.image}" alt="${product.name}" />
       <h3>${product.name}</h3>
       <p>${product.price}</p>
+      <p class='cart'>Add cart</p>
       
     `;
     container.appendChild(card);

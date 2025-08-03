@@ -77,4 +77,24 @@ header input {
   font-weight: bold;
 }
 
+.cart{
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  background-color: rgb(46, 215, 46);
+  box-shadow: inset 0px 0px 20px rgb(40, 48, 28);
+  color: #bbb;
+  padding: 15px;
+  transition: all;
+  transition-duration: 2s;
+  
+
+  &:hover{
+
+  background-color: rgb(40, 48, 28);
+  box-shadow: inset 0px 0px 20px  rgb(46, 215, 46);
+
+  }
+}
+
+
  
