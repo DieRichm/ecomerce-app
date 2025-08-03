@@ -3,13 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    <title>Jiji GHANA</title>
+    <link rel="stylesheet" href="css/dropdown.css">
+
     <style>
-        * {box-sizing:border-box}
+     * {box-sizing:border-box}
 
 .slideshow-container {
   max-width: 100%;
-  max-height:fit-content;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+ 
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: rgb(255, 0, 115);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -95,25 +185,50 @@
 
 
 
-*{
+
+
+
+  *{
     list-style: none;
   }
        .column{
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    height:600px ;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+   
+  
+  }
+
+   .columnFooter{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: wrap;
+    height:450px ;
     row-gap: 20px;
   
   }
-  
-  .row{
+
+     .row{
   
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+  
+  .rowFooter{
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
   
   
   
@@ -128,15 +243,18 @@
   }
 
   .cover{
-
+    padding:60px;
     height:auto;
     margin-top: 50px;
     text-align: center;
+   
+  
+    
   
   }
   .img{
-    height: 200px;
-    width: 100%;
+    height: 250px;
+    width: 250px;
     
   }
 
@@ -147,9 +265,8 @@
     text-align: center;
     border: 1px solid gray;
     border-radius: 1rem;
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin: 10px;
+    flex-grow: 0;
+    flex-shrink:0;
     padding: 10px;
     background-color: antiquewhite;
     box-shadow: 0 0 100px  10px rgba(0,0,0,1);
@@ -163,8 +280,7 @@
   .footer{
     margin-top: 100px;
     background-color:  green;
-    height: 100%;
-    width: 100%;
+    height: auto;
     color: brown;
   }
   .footer ul >:nth-child(1){
@@ -201,61 +317,49 @@
   
   
 
-
-
-
-
-
-
-
-    
-
-
-
+  
     </style>
 </head>
 <body>
+  
+
+
     <nav class="nav row">
         <div>jiji</div>
-         <a href="oid.html"><div>HOME</div></a>
-         <div> THANK YOU </div>
+        
+        <div>Contact Us</div>
+        
+         
+         <a href="form.html"><div>Sign in| Registration</div></a>
+         <a href="slides2.htm"><div> SELL </div></a>
           
            
     </nav>
     
     
+    
     <div class="slideshow-container">
-    <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="images/bmw1.avif" style="width:100%">
-    <div class="text">Next </div>
+    <div class="mySlides fade"> 
+    <img src="images/logo.jpg" style="width:100%">
+    
   </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="images/logo1.jpg" style="width:100%">
-    <div class="text">Next </div>
+  <div class="mySlides fade"> 
+    <img src="images/logo1.jpg" style="width:100%"> 
   </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="images/lap5.avif" style="width:100%">
-    <div class="text">End</div>
+  <div class="mySlides fade"> 
+    <img src="images/pexels-albinberlin-919073.jpg" style="width:100%">
+    
   </div>
 
  
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
 
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
+
+
+ 
 
 
 
@@ -263,216 +367,18 @@
   
           
            
-    </nav>
     
-      <!-- <div class="cap">
-       <a href="rt.html"> shop now</a>
+    
+      <div class="cap">
+       <a href="slides2.htm"> shop now</a>
        
 
-      </div> -->
       </div> 
-
-    
-          
-
+      </div> 
     <div class="cover column">
-      
-       <div class="row">
-         <div class="box">
-          
-          <div class="img"><img src="images/IMG-20250621-WA0127.jpg" alt="" height="100%" width="100%" ></div>
-          <h2>Gucci</h2>
-            <P>$19</P>
-            <button>Add to Cart</button>
-        </div>
-        
-         <div class="box">
-          <div class="img"><img src="images/IMG-20250621-WA0125.jpg" alt="" height="100%" width="100%" ></div>
-          <h4>Top and Down</h4>
-            <P>$19</P>
-            <button>Add to Cart</button>
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/IMG-20250621-WA0124.jpg" alt="" height="100%" width="100%" ></div>
-           <h5>Best Wear</h5>
-            <P>$19</P>
-            <button>Add to Cart</button>
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/IMG-20250621-WA0123.jpg" alt="" height="100%" width="100%" ></div>
-          <h6>Best Man</h6>
-            <P>$19</P>
-            <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="cover column">
-      
-       <div class="row">
-         <div class="box">
-          
-          <div class="img"><img src="images/elegant-classic-car-with-retro-color-photo.jpg" alt="" height="100%" width="100%" ></div>
-          <h2>1953 Buick Sylark</h2>
-            <P>$50,0000</P>
-            <button>Add to Cart</button>
-        </div>
-        
-         <div class="box">
-          <div class="img"><img src="images/pexels-mikebirdy-112460.jpg" alt="" height="100%" width="100%" ></div>
-          <h8>Mercedes-AMG</h8>
-            <P>$70,0000</P>
-            <button>Add to Cart</button>
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/pexels-pixabay-210019.jpg" alt="" height="100%" width="100%" ></div>
-           <h9>Alfa Romeo 4c</h9>
-            <P>$65,0000</P>
-            <button>Add to Cart</button>
-        </div>
-
-        
-    </div>
-    <div class="cover column">
-      
+      <div class="seth">
+         FASHION
          </div>
-       <div class="row">
-         <div class="box">
-          <div class="img"><img src="images/15.webp" alt="" height="100%" width="100%" ></div>
-          <h15>Ipone 15 Pro Max</h15>
-            <P>$1,199</P>
-            <button>Add to Cart</button>
-          
-          
-        </div>
-        
-         <div class="box">
-          <div class="img"><img src="images/16 pro_.jpg" alt="" height="100%" width="100%" ></div>
-          <h18>Iphone 16 Pro</h18>
-            <P>$2,199</P>
-            <button>Add to Cart</button>
-          
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/14.jpg" alt="" height="100%" width="100%" ></div>
-          <h16>Ipone 14 Pro max</h16>
-            <P>$1,000</P>
-            <button>Add to Cart</button>
-         
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/16.avif" alt="" height="100%" width="100%" ></div>
-          <h17>Iphone 16</h17>
-            <P>$2,199</P>
-            <button>Add to Cart</button>
-          
-            </div>
-        </div>
-    </div>
-     </div>
-    <div class="cover column">
-      
-       <div class="row">
-         <div class="box">
-          <div class="img"><img src="images/food.img4.png" alt="" height="100%" width="100%" ></div>
-          <h15>Locally Made</h15>
-            <P>$7</P>
-            <button>Add to Cart</button>
-          
-          
-        </div>
-        
-
-         <div class="box">
-          <div class="img"><img src="images/food.img.png" alt="" height="100%" width="100%" ></div>
-          <h16>Fresh And Yummy</h16>
-            <P>$5</P>
-            <button>Add to Cart</button>
-         
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/food.img3.png" alt="" height="100%" width="100%" ></div>
-          <h17>Locally Made Food</h17>
-            <P>$6</P>
-            <button>Add to Cart</button>
-            </div>
-          
-            </div>
-            </div>
-
-         
-           
-    </div>
-    <div class="cover column">
-
-       <div class="row">
-         <div class="box">
-          <div class="img"><img src="images/sett.jpg" alt="" height="100%" width="100%" ></div>
-          <h15>Street Dress</h15>
-            <P>$100</P>
-            <button>Add to Cart</button>
-          
-          
-        </div>
-        
-         <div class="box">
-          <div class="img"><img src="images/dress.webp" alt="" height="100%" width="100%" ></div>
-          <h18>Quality Dress</h18>
-            <P>$200</P>
-            <button>Add to Cart</button>
-          
-        </div>
-
-         
-
-         <div class="box">
-          <div class="img"><img src="images/dress.jpg" alt="" height="100%" width="100%" ></div>
-          <h17>Backcase</h17>
-            <P>$300</P>
-            <button>Add to Cart</button>
-          
-            </div>
-        </div>
-    </div>
-
-
-    <div class="cover column">
-      
-       <div class="row">
-         <div class="box">
-          
-          <div class="img"><img src="images/lap.avif" alt="" height="100%" width="100%" ></div>
-          <h2>Laptop</h2>
-            <P>$19</P>
-            <button>Add to Cart</button>
-        </div>
-        
-         <div class="box">
-          <div class="img"><img src="images/lap2.avif" alt="" height="100%" width="100%" ></div>
-          <h4>Laptop</h4>
-            <P>$19</P>
-            <button>Add to Cart</button>
-        </div>
-
-         <div class="box">
-          <div class="img"><img src="images/lap3.avif" alt="" height="100%" width="100%" ></div>
-           <h5>Laptop</h5>
-            <P>$19</P>
-            <button>Add to Cart</button>
-        </div>
-
-         
-    </div>
-    <div class="cover column">
-     
        <div class="row">
          <div class="box">
           
@@ -553,14 +459,228 @@
           
         </div>
 
-         <!-- <div class="box">
+         <div class="box">
           <div class="img"><img src="images/IMG-20250621-WA0123.jpg" alt="" height="100%" width="100%" ></div>
           <h6>Best Man</h6>
             <P>$19</P>
             <button>Add to Cart</button>
             </div>
         </div>
-    </div> -->
+    </div>
+
+
+
+    <div class="cover column">
+      <div class="seth">
+         MODERN CARS
+         </div>
+       <div class="row">
+         <div class="box">
+          
+          <div class="img"><img src="images/elegant-classic-car-with-retro-color-photo.jpg" alt="" height="100%" width="100%" ></div>
+          <h2>1953 Buick Sylark</h2>
+            <P>$50,0000</P>
+            <button>Add to Cart</button>
+        </div>
+        
+         <div class="box">
+          <div class="img"><img src="images/pexels-mikebirdy-112460.jpg" alt="" height="100%" width="100%" ></div>
+          <h8>Mercedes-AMG</h8>
+            <P>$70,0000</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lambo.avif" alt="" height="100%" width="100%" ></div>
+          <h8>Lambo</h8>
+            <P>$80,0000</P>
+            <button>Add to Cart</button>
+        </div>
+         <div class="box">
+          <div class="img"><img src="images/lambo1.avif" alt="" height="100%" width="100%" ></div>
+          <h8>Lambo</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/bmw.avif" alt="" height="100%" width="100%" ></div>
+          <h8>BMW</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/bmw1.avif" alt="" height="100%" width="100%" ></div>
+          <h8>BMW</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+            
+
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/bmw2.avif" alt="" height="100%" width="100%" ></div>
+          <h8>BMW</h8>
+            <P>$90,0000</P>
+            <button>Add to Cart</button>
+        </div>
+
+
+         <div class="box">
+          <div class="img"><img src="images/pexels-pixabay-210019.jpg" alt="" height="100%" width="100%" ></div>
+           <h9>Alfa Romeo 4c</h9>
+            <P>$65,0000</P>
+            <button>Add to Cart</button>
+        </div>
+
+        
+    </div>
+    <div class="cover column">
+      <div class="seth">
+         IPONES 
+         </div>
+       <div class="row">
+         <div class="box">
+          <div class="img"><img src="images/15.webp" alt="" height="100%" width="100%" ></div>
+          <h15>Ipone 15 Pro Max</h15>
+            <P>$1,199</P>
+            <button>Add to Cart</button>
+          
+          
+        </div>
+        
+         <div class="box">
+          <div class="img"><img src="images/16 pro_.jpg" alt="" height="100%" width="100%" ></div>
+          <h18>Iphone 16 Pro</h18>
+            <P>$2,199</P>
+            <button>Add to Cart</button>
+          
+        </div>
+
+         <div class="box">
+          <div class="img"><img src="images/14.jpg" alt="" height="100%" width="100%" ></div>
+          <h16>Ipone 14 Pro max</h16>
+            <P>$1,000</P>
+            <button>Add to Cart</button>
+         
+        </div>
+
+         <div class="box">
+          <div class="img"><img src="images/16.avif" alt="" height="100%" width="100%" ></div>
+          <h17>Iphone 16</h17>
+            <P>$2,199</P>
+            <button>Add to Cart</button>
+          
+            </div>
+
+             <div class="box">
+          <div class="img"><img src="images/16.avif" alt="" height="100%" width="100%" ></div>
+          <h17>Iphone 16</h17>
+            <P>$2,199</P>
+            <button>Add to Cart</button>
+          
+            </div>
+        </div>
+    </div>
+     </div>
+    <div class="cover column">
+      <div class="seth">
+            FOODS ON DELIVERY
+         </div>
+       <div class="row">
+         <div class="box">
+          <div class="img"><img src="images/food.img4.png" alt="" height="100%" width="100%" ></div>
+          <h15>Locally Made</h15>
+            <P>$7</P>
+            <button>Add to Cart</button>
+          
+          
+        </div>
+        
+
+         <div class="box">
+          <div class="img"><img src="images/food.img.png" alt="" height="100%" width="100%" ></div>
+          <h16>Fresh And Yummy</h16>
+            <P>$5</P>
+            <button>Add to Cart</button>
+         
+        </div>
+        
+
+         <div class="box">
+          <div class="img"><img src="images/food.img3.png" alt="" height="100%" width="100%" ></div>
+          <h17>Locally Made Food</h17>
+            <P>$6</P>
+            <button>Add to Cart</button>
+            </div>
+          
+            </div>
+            </div>
+
+         
+           
+    </div>
+   
+
+
+    <div class="cover column">
+      <div class="seth">
+         LAPTOPS
+         </div>
+       <div class="row">
+         <div class="box">
+          
+          <div class="img"><img src="images/lap.avif" alt="" height="100%" width="100%" ></div>
+          <h2>Laptop</h2>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        
+        
+         <div class="box">
+          <div class="img"><img src="images/lap2.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap8.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap7.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap6.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+        <div class="box">
+          <div class="img"><img src="images/lap5.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+       
+                <div class="box">
+          <div class="img"><img src="images/lap3.avif" alt="" height="100%" width="100%" ></div>
+          <h4>Laptop</h4>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+
+         <div class="box">
+          <div class="img"><img src="images/lap3.avif" alt="" height="100%" width="100%" ></div>
+           <h5>Laptop</h5>
+            <P>$19</P>
+            <button>Add to Cart</button>
+        </div>
+
+           </div>
+    </div>
 
 
 
@@ -618,9 +738,9 @@
     </H1>
 
 
-    <footer class="footer  row">
+    <footer class="footer  rowFooter">
 
-      <ul class="column">
+      <ul class="columnFooter">
        <li>About Us</li>
         <li>About Jiji</li>
          <li>We are hiring!</li>
@@ -634,7 +754,7 @@
 
       
 
-       <ul class="column">
+       <ul class="columnFooter">
         <li>Support</li>
        <li>support@jiji.com.gh</li>
         <li>Safty tips</li>
@@ -642,20 +762,20 @@
          <li>FAQ</li>
       </ul>
 
-       <ul class="column">
+       <ul class="columnFooter">
        <li>Our apps</li>
         <li>App Store</li>
          <li>Google Play</li>
       </ul>
 
-       <ul class="column">
+       <ul class="columnFooter">
        <li>Our resources</li>
         <li>Jiji on FB</li>
          <li>Our Instagram</li>
          <li>Our YouTube</li>
          <Li>Our Twitter</Li>
       </ul>
-      <ul class="column">
+      <ul class="columnFooter">
         <li>Hot links</li>
         <li>Jiji Africa</li>
 
@@ -663,30 +783,105 @@
       
 
     </footer>
+    <script src="form.js"></script>
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="js/slides2.js"></script>
-    
-
-
 </body>
 </html>
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="js/form.js"></script> 
+<script src="js/slidesauto.js"></script>
   
+</body>
+
+</html>

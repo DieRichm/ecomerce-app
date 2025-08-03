@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jumia Clone</title>
+  <link rel="stylesheet" href="css/new2.css" />
+</head>
+<body>
+
+  <header>
+   <a href="new.html"> <h1>Jumia Clone</h1></a>
+    <input type="text" placeholder="Search products..." />
+  </header>
+
+  <nav class="categories">
+    <button onclick="filterCategory('All')">All</button>
+    <button onclick="filterCategory('Phones')">Phones</button>
+    <button onclick="filterCategory('Dresses')">Dresses</button>
+    <button onclick="filterCategory('Foods')">Foods</button>
+    <button  onclick="filterCategory('Cars')">Cars</button>
+
+
+  </nav>
+ 
+
+  <section class="products-section">
+    <h2>Products</h2>
+    <div class="products-container" id="products-container">
+      
+    </div>
+  </section>
+
+  <script src="js/new2.js"></script>
+</body>
+</html>
