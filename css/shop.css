@@ -93,15 +93,18 @@ header input {
   background-color: rgb(46, 215, 46);
   box-shadow: inset 0px 0px 20px rgb(40, 48, 28);
   color: #bbb;
-  padding: 15px;
+  padding: 5px 5px;
   transition: all;
   transition-duration: 2s;
+  cursor: pointer;
+   font-size: 18px;
+   width: 100%;
   
 
   &:hover{
 
   background-color: rgb(40, 48, 28);
-  box-shadow: inset 0px 0px 20px  rgb(46, 215, 46);
+  box-shadow: inset 0px 0px 20px  rgb(46, 50, 46);
 
   }
 }

@@ -37,7 +37,10 @@ const products = [
   
 ];
 
+
 const container = document.getElementById("products-container");
+let cartCount = 0;
+const cartCountElement = document.getElementById("cart-count");
 
 function displayProducts(filteredProducts) {
   container.innerHTML = "";
@@ -48,13 +51,19 @@ function displayProducts(filteredProducts) {
       <img src="${product.image}" alt="${product.name}" />
       <h3>${product.name}</h3>
       <p>${product.price}</p>
-      <p class='cart'>Add cart</p>
-      
+      <button class='cart'>Add cart</button>
     `;
     container.appendChild(card);
   });
-}
 
+ 
+  document.querySelectorAll(".cart").forEach(button => {
+    button.addEventListener("click", () => {
+      cartCount++;
+      cartCountElement.textContent = cartCount;
+    });
+  });
+}
 
 displayProducts(products);
 
@@ -66,7 +75,3 @@ function filterCategory(category) {
     displayProducts(filtered);
   }
 }
-
-
-
-

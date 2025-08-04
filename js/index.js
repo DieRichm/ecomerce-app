@@ -74,42 +74,69 @@ window.onload = () => {
 
 
 
-const products = [
-  {
-    name: "Iphone 16",
-    price: "₵699",
-    image: "images/iph.webp"
-  },
-  {
-    name: "Laptop HP",
-    price: "₵350",
-    image: "images/lap.jpg"
-  },
-  {
-    name: "Fitness Smartwatch",
-    price: "₵999",
-    image: "images/ear3.webp"
-  },
-  {
-    name: "Modern Desk Lamp",
-    price: "₵80",
-    image: "images/ear2.avif"
-  }
-];
 
-const grid = document.getElementById("product-grid");
 
-products.forEach(product => {
-  const card = document.createElement("div");
-  card.className = "product-card";
-  card.innerHTML = `
-    <img src="${product.image}" alt="${product.name}">
-    <h3>${product.name}</h3>
-    <p>${product.price}</p>
-    <p class='cart'>Add cart</p>
-  `;
-  grid.appendChild(card);
+
+window.addEventListener('DOMContentLoaded', () => {
+  const products = [
+    {
+      name: "Iphone 16",
+      price: "₵699",
+      image: "images/iph.webp"
+    },
+    {
+      name: "Laptop HP",
+      price: "₵350",
+      image: "images/lap.jpg"
+    },
+    {
+      name: "Fitness Smartwatch",
+      price: "₵999",
+      image: "images/ear3.webp"
+    },
+    {
+      name: "Modern Desk Lamp",
+      price: "₵80",
+      image: "images/ear2.avif"
+    },
+     {
+      name: "Modern Desk Lamp",
+      price: "₵80",
+      image: "images/ear2.avif"
+    },
+    
+    
+    
+    
+  ];
+  
+
+  const grid = document.getElementById("product-grid");
+
+  products.forEach(product => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>${product.price}</p>
+      <p class='cart'>Add cart</p>
+    `;
+    grid.appendChild(card);
+  });
+
+  // ADD TO CART LOGIC (inside DOMContentLoaded)
+  let cartCount = 0;
+  const cartCountElement = document.getElementById("cart-count");
+
+  document.querySelectorAll(".cart").forEach(cartBtn => {
+    cartBtn.addEventListener("click", () => {
+      cartCount++;
+      cartCountElement.textContent = cartCount;
+    });
+  });
 });
+
 
 
 
